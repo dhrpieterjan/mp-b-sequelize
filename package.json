@@ -1,0 +1,46 @@
+{
+  "name": "mp-b-sequelize",
+  "version": "1.0.0",
+  "description": "The masterthesis backend using Sequelize",
+  "main": "index.js",
+  "license": "MIT",
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/*",
+      "docker/*",
+      "docs/*",
+      ".vscode/*"
+    ],
+    "delay": "80",
+    "watch": [
+      "src"
+    ],
+    "ext": "ts,js,json",
+    "legacyWatch": true,
+    "exec": "NODE_OPTIONS='--inspect=0.0.0.0:9301' ts-node src/index.ts"
+  },
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "dependencies": {
+    "@types/winston": "^2.4.4",
+    "koa": "^2.13.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-helmet": "^6.1.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.1",
+    "koa-qs": "^3.0.0",
+    "koa-response-time": "^2.1.0",
+    "koa-router": "^10.0.0",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.1",
+    "@types/koa-router": "^7.4.1",
+    "config": "^3.3.6",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}
